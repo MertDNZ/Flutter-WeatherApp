@@ -23,16 +23,16 @@ class _WeatherViewState extends State<WeatherView> {
       case 'haze':
       case 'dust':
       case 'fog':
-        return 'lib/assets/bulutlu_sabah.json';
+        return 'lib/assets/cloudy_morning.json';
       case 'rain':
       case 'drizzle':
       case 'shower rain':
       case 'thunderstorm':
-        return 'lib/assets/yagmurlu_sabah.json';
+        return 'lib/assets/rainy_morning.json';
       case 'clear':
-        return 'lib/assets/gunesli.json';
+        return 'lib/assets/sunny.json';
       default:
-        return 'lib/assets/gunesli.json';
+        return 'lib/assets/sunny.json';
     }
   }
 
@@ -93,7 +93,7 @@ class _WeatherViewState extends State<WeatherView> {
             (states) => Theme.of(context).colorScheme.onPrimary),
       ),
       child: Text(
-        'Hava Durumunu Güncelle',
+        'Refresh',
         style: Theme.of(context).textTheme.labelMedium,
       ),
     );
