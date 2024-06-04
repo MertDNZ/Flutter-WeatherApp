@@ -38,7 +38,9 @@ class _WeatherViewState extends State<WeatherView> {
 
   @override
   void initState() {
-    Provider.of<WeatherProvider>(context, listen: false).getWeather();
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+      Provider.of<WeatherProvider>(context, listen: false).getWeather();
+    });
     super.initState();
   }
 
